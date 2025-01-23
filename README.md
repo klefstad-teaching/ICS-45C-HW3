@@ -219,7 +219,7 @@ There are a few important things to know about declaration vs definition syntax.
 Example: to define the constructor and the static method `strlen()` and method `size()` declared in `class String` in the file `string.hpp` like this:
 
 ```cpp
-explicit String(const char *s = “”);
+explicit String(const char *s = "");
 static int strlen(const char *s);
 int size();
 ```
@@ -235,7 +235,7 @@ String::String(const char *s) {
 // notice static is gone
 int String::strlen(const char *s) {
     int len=0;
-    while (s[len] != ‘\0’)
+    while (s[len] != '\0')
         ++len;
     return len;
 }
