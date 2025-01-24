@@ -106,7 +106,7 @@ string.hpp screenshot
 
 In the file named `string.cpp`, define the methods given in the `string.hpp` declaration. (Use the same `#includes` and `using` as in standard_main.cpp, given below.)
 
-To implement the methods, follow the [Steps of incremental development](#steps-of-incremental-development) given below. Some key details may be given only in the Steps.
+To implement the methods, follow the [Steps of incremental development](#steps-of-incremental-development) given below. **Some key details may be given only in the Steps.**
 
 Example of identifying static helper methods needed for an interface method:
 As the Steps detail,  identify one or a couple tightly-coupled interface methods, and implement the static helper methods needed, one at a time, testing each one for correctness.
@@ -157,7 +157,7 @@ Write these tests at the same time as you are developing the static helpers usin
 
 **We will also grade these tests in the autograder.** Your tests should pass for a correct implementation of these helper functions but ***should fail*** on buggy implementations that we will run them on. Each test should test only the function it is named after. Do not add entirely new tests to this file, as the names are important - instead use `string_gtests.cpp`.
 
-An important point is that when we do not just require that your tests pass for your own code, they have to pass for our correct implementation. So you should not make extra assumptions in your tests or test behavior that we didn't specify. For example, `strcmp` is not required to return -1,0, or 1, and none of the string helper functions are required to work on `nullptr` inputs.
+An important point is that we require not only that your tests pass for **your** own code, they must also pass for **our** correct implementation. So you should not make extra assumptions in your tests or test behavior that we didn't specify. For example, `strcmp` is not required to return -1,0, or 1, and none of the string helper functions are required to work on `nullptr` inputs.
 
 > ⚠️ **Warning**: Because GTest internally includes the standard library header `<string.h>`, there are versions of `strcmp`, `strcat`, etc. in the global namespace. Make sure that you always qualify your static member functions. For example, you have to call `String::strcmp`, not `strcmp`, or you are not testing your own code!
 
@@ -165,7 +165,7 @@ An important point is that when we do not just require that your tests pass for 
 
 After your class `String` is working, use your class `String` in a standard `main()` written in a file named `standard_main.cpp`. `standard_main` calls and uses your class `String` functions in the typical ways they would be used.
 
- > Your class `String` functions will also be thoroughly tested with hidden test cases by the autograder.
+ > Your class `String` functions will also be thoroughly tested with test cases by the autograder.
 
 standard_main.cpp screenshot
 
@@ -280,7 +280,7 @@ Below is a start on an algorithm you can use for `strcmp()`
 ![solution 4](/assets/3-6.png)
 
 How to Test, Compile, and Run the programs
-Follow the Steps given in the [Steps of incremental development](#steps-of-incremental-development) section, adding test cases to the tests given in the GitHub hw3, building with CMake repeatedly, and running with sanitizers and/or valgrind until you are convinced that everything works correctly.
+Follow the Steps given in the [Steps of incremental development](#steps-of-incremental-development) section, adding test cases to the tests given in the GitHub hw3 repo, building with CMake repeatedly, and running with sanitizers and/or valgrind until you are convinced that everything works correctly.
 
 ## Build Instructions
 
@@ -318,13 +318,13 @@ all provided tests, congratulations! You are now ready to [submit](#submission) 
 
 ## Submission
 
-As with previous submissions, you can submit via `GitHub` by the following steps:
+As with previous submissions, submit via `GitHub` by the following steps:
 
 1. `git add .`
 2. `git commit -a -m "Commit Message Here"`
 3. `git push --set-upstream origin main`
 
-to push your changes to your private GitHub repository, and then submit the `hw3` branch to `Gradescope`.
+to push your changes to your private GitHub repository, and then submit `hw3` to `Gradescope`.
 
 ## Credit
 
